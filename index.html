@@ -1,1 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>VzFotos</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 300ms;
+    outline: none;
+}
+@font-face {
+    font-family: 'TipoTiago';
+    src: url('Batangas-Bold.otf') format('truetype');
+    font-weight: normal; /* Cambia a bold si tienes variantes */
+    font-style: normal;  /* Cambia a italic si tienes variantes */
+}
+@font-face {
+    font-family: 'TipoTiago-numero';
+    src: url('tipografiatiago-numero.otf') format('truetype');
+    font-weight: normal; /* Cambia a bold si tienes variantes */
+    font-style: normal;  /* Cambia a italic si tienes variantes */
+}
+body{
+    background-color: rgb(21 18 18)
+}
+.perfil {
+    width: 100%;
+    height: 500px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -50px;
+}
+.img-perfil-nombre {
+    color: white;
+    width: 550px;
+    height: 350px;
+    padding: 20px;
+    background: #00000017;
+    border-radius: 20px;
+    margin: 10px;
+    border: 1px solid #ffffff17;
+}
+.img-nombre {
+    justify-content: center;
+    display: grid;
+    margin: 0px 0px 20px;
+}
+img.imagen {
+    width: 140px;
+    height: 140px;
+    margin: 20px 0px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+h5.Nombre {
+    text-align: center;
+    font-family: 'TipoTiago-numero';
+    font-size: 1.2rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
 
+svg.svg-camara {
+    width: 20px;
+    height: 20px;
+}
+.fotos-videos-botones {
+    display: flex;
+    font-family:'TipoTiago' ;
+}
+a.Tik-Tok {
+    display: flex
+;
+    color: rgb(255, 255, 255);
+    background: #1d1c1c;
+    width: 30px;
+    align-items: center;
+    padding: 3px 0px;
+    border-radius: 20px;
+    margin: 0px 10px 0px 0px;
+    justify-content: center;
+}
+h5.descripcion {
+    margin: 60px 0px 0px 0px;
+    font-family: 'Tipotiago';
+    letter-spacing: 1px;
+    font-size: 0.6rem;
+    color: #ffffff4a;
+    font-weight: 900;
+}
+span.Photo {
+    color: white;
+}
+.svg-camara path{
+    fill: white;
+}
+.yb-svg-path:hover{
+    fill: #ff0000;
+}
+.tk-svg-path:hover{
+    fill: #fe2c55;
+}
+.spy-svg-path:hover{
+    fill: #1fd860;
+}
+.ig-svg-path:hover{
+    fill: #e4228b;
+}
+
+.filtrar-img-videos {
+    display: flex;
+    width: 70%;
+    margin: 20px 15% 0px;
+    height: 40px;
+    background: #131010;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: #777777;
+    justify-content: space-between;
+    font-family: 'TipoTiago';
+    font-weight: 100;
+    border: 1px solid rgb(255 255 255 / 5%);
+    font-size: 0.8rem;
+}
+.filtrar-img-videos a {
+    margin: 0px 10px;
+    cursor: pointer;
+}
+div#contenido {
+    width: 95%;
+    margin: 30px 2.5% 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.item {
+    width: 100%;
+    height: auto;
+}
+.item img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    object-fit: cover;
+
+}
+button, a, input {
+    outline: none;
+  }
+
+.musica {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.musica-contenedor {
+    width: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 15px;
+    background: linear-gradient(114deg, #2f2232, #000000);
+    margin: 0px 10px;
+    justify-content: space-between;
+}
+
+.Letra-contenedor {
+    width: 550px;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background: linear-gradient(14deg,#2f2232, #000000);
+    margin: 10px 10px;
+    justify-content: space-between;
+}
+img.poster-musica {
+    width: 55px;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.foto-perfil-musica {
+    width: 70%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+p.titulo-musica-p {
+    font-family: 'TipoTiago';
+    letter-spacing: 1px;
+    font-size: .8rem;
+}
+
+.foto-perfil-musica div {
+    margin: 0px 10px;
+}
+p.cantante {
+    font-size: .4rem;
+    font-family: 'TipoTiago';
+    color: #ffffff82;
+    position: absolute;
+    margin: 7px 0px 0px;
+}
+
+.play {
+    margin: 0px 10px 0px 0px;
+}
+svg.Play, .Pause {
+    width: 20px;
+    height: 20px;
+}
+.play path , .Pause path{
+    fill: white;
+}
+.Pause{
+    display: none;
+}
+.filtrar-img-videos a:hover {
+    color: white;
+}
+svg.Horizontal , svg.vertical {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: 15px;
+}
+svg.Horizontal path , svg.vertical path {
+fill: white;
+}
+/* Animación del spinner */
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media (min-width: 1200px) {
+    div#contenido {
+      grid-template-columns: repeat(5, 1fr); /* 6 imágenes por fila en pantallas grandes */
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    div#contenido {
+      grid-template-columns: repeat(4, 1fr); /* 4 imágenes por fila en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 932px) {
+    div#contenido {
+      grid-template-columns: repeat(3, 1fr); /* 2 imágenes por fila en pantallas pequeñas */
+    }
+  }
+
+  @media (max-width: 652px) {
+    div#contenido {
+      grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en pantallas pequeñas */
+    }
+    .filtrar-img-videos {
+        display: flex;
+        width: 90%;
+        margin: 30px 5%;
+        height: 40px;
+        background: #131010;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        color: #777777;
+        justify-content: space-between;
+        font-family: 'TipoTiago';
+        font-weight: 900;
+        border: 1px solid rgb(255 255 255 / 5%);
+
+    }
+  }
+
+  @media (max-width: 500px) {
+    div#contenido {
+      grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en pantallas pequeñas */
+    }
+  
+    .filtrar-img-videos a {
+        cursor: pointer;
+    }
+
+    .perfil {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 0;
+    }
+    .musica-contenedor {
+        width: 350px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 5px 5px;
+        border-radius: 15px;
+        margin: 0px 10px;
+    }
+
+  }
+
+
+  @media (max-width: 367px) {
+    .filtrar-img-videos {
+        display: flex;
+        width: 90%;
+        margin: 30px 5%;
+        height: 40px;
+        background: #131010;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        color: #777777;
+        justify-content: space-between;
+        font-family: 'TipoTiago';
+        font-weight: 900;
+        border: 1px solid rgb(255 255 255 / 5%);
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="perfil">
+        <div class="img-perfil-nombre">
+            <div class="fotos-videos-botones">
+                <a href="https://www.youtube.com/@barkitaa" class="Tik-Tok">
+                    <svg class="svg-camara" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 -3 20 20" version="1.1">
+    
+                        <title>Youtube</title>
+
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-300.000000, -7442.000000)" fill="#000000">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path class="yb-svg-path" d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289" id="youtube-[#168]">
+                    
+                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg></a>
+                <a href="https://www.tiktok.com/@barkitax" class="Tik-Tok" >
+                    <svg class="svg-camara " xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1">
+                        <title>Tik Tok</title>
+                        <path class="tk-svg-path" d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"/>
+                        </svg>
+                </a>
+                <a href="https://open.spotify.com/user/31tpea6niqrcfjwlhzh7emynxzii?si=a85129fd76104f97" class="Tik-Tok" >
+                    <svg class="svg-camara" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 20 20" version="1.1">
+    
+                        <title>Spotify</title>
+                        <defs>
+                    
+                    </defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7479.000000)" fill="#000000">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path class="spy-svg-path" d="M99.915,7327.865 C96.692,7325.951 91.375,7325.775 88.297,7326.709 C87.803,7326.858 87.281,7326.58 87.131,7326.085 C86.981,7325.591 87.26,7325.069 87.754,7324.919 C91.287,7323.846 97.159,7324.053 100.87,7326.256 C101.314,7326.52 101.46,7327.094 101.196,7327.538 C100.934,7327.982 100.358,7328.129 99.915,7327.865 L99.915,7327.865 Z M99.81,7330.7 C99.584,7331.067 99.104,7331.182 98.737,7330.957 C96.05,7329.305 91.952,7328.827 88.773,7329.792 C88.36,7329.916 87.925,7329.684 87.8,7329.272 C87.676,7328.86 87.908,7328.425 88.32,7328.3 C91.951,7327.198 96.466,7327.732 99.553,7329.629 C99.92,7329.854 100.035,7330.334 99.81,7330.7 L99.81,7330.7 Z M98.586,7333.423 C98.406,7333.717 98.023,7333.81 97.729,7333.63 C95.381,7332.195 92.425,7331.871 88.944,7332.666 C88.609,7332.743 88.274,7332.533 88.198,7332.197 C88.121,7331.862 88.33,7331.528 88.667,7331.451 C92.476,7330.58 95.743,7330.955 98.379,7332.566 C98.673,7332.746 98.766,7333.129 98.586,7333.423 L98.586,7333.423 Z M94,7319 C88.477,7319 84,7323.477 84,7329 C84,7334.523 88.477,7339 94,7339 C99.523,7339 104,7334.523 104,7329 C104,7323.478 99.523,7319.001 94,7319.001 L94,7319 Z" id="spotify-[#162]">
+                    
+                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/barka.zzz/" class="Tik-Tok" >
+                    <svg class="svg-camara" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                        <title>Instagram</title>
+                        <path class="ig-svg-path" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM12 15.88C9.86 15.88 8.12 14.14 8.12 12C8.12 9.86 9.86 8.12 12 8.12C14.14 8.12 15.88 9.86 15.88 12C15.88 14.14 14.14 15.88 12 15.88ZM17.92 6.88C17.87 7 17.8 7.11 17.71 7.21C17.61 7.3 17.5 7.37 17.38 7.42C17.26 7.47 17.13 7.5 17 7.5C16.73 7.5 16.48 7.4 16.29 7.21C16.2 7.11 16.13 7 16.08 6.88C16.03 6.76 16 6.63 16 6.5C16 6.37 16.03 6.24 16.08 6.12C16.13 5.99 16.2 5.89 16.29 5.79C16.52 5.56 16.87 5.45 17.19 5.52C17.26 5.53 17.32 5.55 17.38 5.58C17.44 5.6 17.5 5.63 17.56 5.67C17.61 5.7 17.66 5.75 17.71 5.79C17.8 5.89 17.87 5.99 17.92 6.12C17.97 6.24 18 6.37 18 6.5C18 6.63 17.97 6.76 17.92 6.88Z" fill="#292D32"/>
+                        </svg>
+                </a>
+            </div>
+            <div class="img-nombre">
+            <img src="Perfil.png" alt="" class="imagen">
+                <h5 class="Nombre">barka.zzz</h5>
+</div>
+
+
+
+            <div class="informacion">
+                <h5 class="descripcion">La música habla cuando el <span class="Photo">alma </span>siente</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="musica">
+        <div class="musica-contenedor">
+        <div class="foto-perfil-musica">
+            <img src="poster.png" alt="" class="poster-musica">
+           <div>
+            <p class="titulo-musica-p">Hit X Hit</p>
+                <p class="cantante">Barka</p>
+            </div>
+        </div>
+        <div class="play">
+            <svg class="Play" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                <path d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z" fill="#1C274C"/>
+                </svg>
+                <svg class="Pause" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                    <path d="M2 6C2 4.11438 2 3.17157 2.58579 2.58579C3.17157 2 4.11438 2 6 2C7.88562 2 8.82843 2 9.41421 2.58579C10 3.17157 10 4.11438 10 6V18C10 19.8856 10 20.8284 9.41421 21.4142C8.82843 22 7.88562 22 6 22C4.11438 22 3.17157 22 2.58579 21.4142C2 20.8284 2 19.8856 2 18V6Z" fill="#1C274C"/>
+                    <path d="M14 6C14 4.11438 14 3.17157 14.5858 2.58579C15.1716 2 16.1144 2 18 2C19.8856 2 20.8284 2 21.4142 2.58579C22 3.17157 22 4.11438 22 6V18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22C16.1144 22 15.1716 22 14.5858 21.4142C14 20.8284 14 19.8856 14 18V6Z" fill="#1C274C"/>
+                    </svg>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="filtrar-img-videos">
+        <a onclick="filtrarContenido('Todas')">Todas</a>
+        <a onclick="filtrarContenido('Fotos')">Fotos</a>
+        <a onclick="filtrarContenido('Videos')">Videos</a>
+    </div>
+    
+    <div id="contenido">
+        <div class="item" data-tipo="Fotos">
+            <svg class="vertical" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4C6 3.44772 6.44772 3 7 3H17C17.5523 3 18 3.44772 18 4V18C18 18.5523 17.5523 19 17 19H7C6.44772 19 6 18.5523 6 18V4ZM7 1C5.34315 1 4 2.34315 4 4V20C4 21.6569 5.34315 23 7 23H17C18.6569 23 20 21.6569 20 20V4C20 2.34315 18.6569 1 17 1H7ZM12 22C12.5523 22 13 21.5523 13 21C13 20.4477 12.5523 20 12 20C11.4477 20 11 20.4477 11 21C11 21.5523 11.4477 22 12 22Z" fill="#000000"/>
+                </svg>
+            <img loading="lazy" src="1.png"alt="Pc">
+        </div>
+    </div>
+    
+
+
+</body>
+<script>
+    function filtrarContenido(filtro) {
+    const items = document.querySelectorAll("#contenido .item");
+
+    items.forEach(item => {
+        const tipo = item.getAttribute("data-tipo");
+        const fecha = item.getAttribute("data-fecha");
+
+        // Mostrar todos los elementos si el filtro es "Todas"
+        if (filtro === "Todas" ||
+            (filtro === tipo)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+  const audio = new Audio("hitxhit.mp3");"ruta_de_tu_musica.mp3"
+
+  const playButton = document.querySelector(".Play");
+  const pauseButton = document.querySelector(".Pause");
+
+  playButton.addEventListener("click", () => {
+    audio.play(); // Reproducir la música
+    playButton.style.display = "none"; // Ocultar el botón de reproducir
+    pauseButton.style.display = "inline-block"; // Mostrar el botón de pausar
+  });
+
+  pauseButton.addEventListener("click", () => {
+    audio.pause(); // Pausar la música
+    pauseButton.style.display = "none"; // Ocultar el botón de pausar
+    playButton.style.display = "inline-block"; // Mostrar el botón de reproducir
+  });
+</script>
+
+</html>
